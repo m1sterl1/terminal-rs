@@ -12,9 +12,14 @@ script="rm -rf dist/.git* dist/README.md"
 [tasks.zip]
 script="cd dist && zip -r ../terminal.xpi ."
 
+[tasks.wasm]
+workspace = false
+script="cd wasm && cargo make build"
+
 [tasks.dist]
 workspace = false
 dependencies=[
+    "wasm",
     "clean",
     "copy",
     "remove-extra",
