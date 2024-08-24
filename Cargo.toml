@@ -2,5 +2,4 @@
 members = [ 
     "wasm",
     "solver",
-    "tui"
     ]
