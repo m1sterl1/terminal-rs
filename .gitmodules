@@ -1,0 +1,9 @@
+[submodule "wasm"]
+	path = wasm
+	url = https://github.com/m1sterl1/wasm.git
+[submodule "ext-ff"]
+	path = ext-ff
+	url = https://github.com/m1sterl1/ext-ff.git
+[submodule "solver"]
+	path = solver
+	url = https://github.com/m1sterl1/solver.git
