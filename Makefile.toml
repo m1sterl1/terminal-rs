@@ -1,0 +1,22 @@
+[tasks.clean]
+# default task, need to be command
+command = "rm"
+args = ["-rf", "dist", "terminal.xpi"]
+
+[tasks.copy]
+script="cp -rf ext-ff dist"
+
+[tasks.remove-extra]
+script="rm -rf dist/.git* dist/README.md"
+
+[tasks.zip]
+script="cd dist && zip -r ../terminal.xpi ."
+
+[tasks.dist]
+workspace = false
+dependencies=[
+    "clean",
+    "copy",
+    "remove-extra",
+    "zip"
+    ]
